@@ -9,7 +9,7 @@ source 'https://rubygems.org'
 
 # Start the Rails application using src/api/Gemfile.next with `next rails s`
 if next?
-  gem 'rails', '~> 6.2'
+  gem 'rails', '~> 6.1', '>= 6.1.4.2', '>= 6.1.4.2'
 else
   gem 'rails', '~> 6.1'
 end
@@ -32,7 +32,7 @@ gem 'kaminari'
 # for abstract HTML
 gem 'haml'
 # streamline HAML's integration in Rails
-gem 'haml-rails'
+gem 'haml-rails', '>= 2.0.1'
 # to use markdown in the comment system
 gem 'redcarpet'
 # for nested attribute forms
@@ -48,7 +48,7 @@ gem 'bcrypt'
 # for threaded comments
 gem 'acts_as_tree'
 # js plotting (OBS monitor)
-gem 'flot-rails'
+gem 'flot-rails', '>= 0.0.7'
 # XML Serialization got moved here
 gem 'activemodel-serializers-xml'
 # Spider Identification
@@ -64,13 +64,13 @@ gem 'gssapi', require: false
 # for sending events to rabbitmq
 gem 'bunny'
 # for making changes to existing data
-gem 'data_migrate'
+gem 'data_migrate', '>= 7.0.2'
 # for URI encoding
 gem 'addressable'
 # for XML builder
 gem 'builder'
 # to write the rails metrics directly into InfluxDB.
-gem 'influxdb-rails'
+gem 'influxdb-rails', '>= 1.0.3'
 # for copying objects with their relations
 gem 'deep_cloneable'
 # Server-side datatables
@@ -105,7 +105,7 @@ group :development, :production do
   # as interface to LDAP
   gem 'ruby-ldap', require: false
   # to have better logs
-  gem 'lograge'
+  gem 'lograge', '>= 0.11.2'
 end
 
 group :production do
@@ -142,7 +142,7 @@ group :test do
   # for testing common Rails functionality with simple one-liners
   gem 'shoulda-matchers'
   # assigns has been extracted to a gem
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.5'
   # To generate random data
   gem 'rantly'
   # for test analysis in CircleCI
@@ -156,9 +156,9 @@ end
 group :development, :test do
   gem 'rspec'
   # as testing framework
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 5.0.2'
   # for fixtures
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 6.2.0'
   # for mocking the backend
   gem 'vcr'
   # as alternative to the standard IRB shell
@@ -201,15 +201,15 @@ group :assets do
   # for minifying JavaScript
   gem 'uglifier'
   # to use sass in the asset pipeline
-  gem 'sassc-rails'
+  gem 'sassc-rails', '>= 2.1.2'
   # assets for jQuery DataTables
   gem 'jquery-datatables'
   # assets for jQuery and jQuery-ujs
-  gem 'jquery-rails'
+  gem 'jquery-rails', '>= 4.4.0'
   # assets for jQuery-ui
   gem 'jquery-ui-rails', '~> 4.2.1'
   # assets for the bootstrap front-end framework
-  gem 'bootstrap'
+  gem 'bootstrap', '>= 4.6.0'
   # assets for font-awesome vector icons
   gem 'font-awesome-sass'
 end
